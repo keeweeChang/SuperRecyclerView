@@ -39,8 +39,6 @@ public class SuperRecyclerView extends FrameLayout {
     protected int mEmptyId;
     protected int mMoreProgressId;
 
-//    protected LAYOUT_MANAGER_TYPE layoutManagerType;
-
     protected RecyclerView.OnScrollListener mInternalOnScrollListener;
     private RecyclerView.OnScrollListener mSwipeDismissScrollListener;
     protected RecyclerView.OnScrollListener mExternalOnScrollListener;
@@ -195,29 +193,6 @@ public class SuperRecyclerView extends FrameLayout {
 
     private int getLastVisibleItemPosition(RecyclerView.LayoutManager layoutManager) {
         int lastVisibleItemPosition = -1;
-//        if (layoutManagerType == null) {
-//            if (layoutManager instanceof GridLayoutManager) {
-//                layoutManagerType = LAYOUT_MANAGER_TYPE.GRID;
-//            } else if (layoutManager instanceof LinearLayoutManager) {
-//                layoutManagerType = LAYOUT_MANAGER_TYPE.LINEAR;
-//            } else if (layoutManager instanceof StaggeredGridLayoutManager) {
-//                layoutManagerType = LAYOUT_MANAGER_TYPE.STAGGERED_GRID;
-//            } else {
-//                throw new RuntimeException("Unsupported LayoutManager used. Valid ones are LinearLayoutManager, GridLayoutManager and StaggeredGridLayoutManager");
-//            }
-//        }
-
-//        switch (layoutManagerType) {
-//            case LINEAR:
-//                lastVisibleItemPosition = ((LinearLayoutManager) layoutManager).findLastVisibleItemPosition();
-//                break;
-//            case GRID:
-//                lastVisibleItemPosition = ((GridLayoutManager) layoutManager).findLastVisibleItemPosition();
-//                break;
-//            case STAGGERED_GRID:
-//                lastVisibleItemPosition = caseStaggeredGrid(layoutManager);
-//                break;
-//        }
 
         if (layoutManager != null) {
             if (layoutManager instanceof GridLayoutManager) {
